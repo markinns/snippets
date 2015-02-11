@@ -1,0 +1,25 @@
+@media aural, braille, handheld, print, projection, screen, tty, tv, all { /* Avialable media types 'all' targets all types */  }
+
+/* Orientation / Aspect Ratio */
+
+@media (orientation:portrait) { /* can use either portrait or landscape */ }
+
+@media screen and (device-aspect-ratio: 16/9) { ... }
+
+/* Screen Colours */
+
+@media (color) { /* Screen is in color */ }
+
+@media (min-color-index: 256) { /* Screen has at least 256 colors */ }
+
+@media (monochrome) { /* Screen is monochrome */ }
+
+/* Target IE with Media queries */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* Target IE10	*/ }
+
+@media screen and (min-width:0\0) { /* Target IE9 + IE10 */ }
+
+/* Common Devices */
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) { /* iPad Mini */}
