@@ -100,3 +100,15 @@ class new_general_setting {
         echo '<input type="text" id="custom_field" name="custom_field" value="' . $value . '" />';
     }
 }
+
+
+/**
+ * Allow SVG files to be loaded into the WP media uploader.
+ * SVG files may not display correctly in the media grid
+ * view (as of Version 4.0)
+ */
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
