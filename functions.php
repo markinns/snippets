@@ -93,7 +93,7 @@ class new_general_setting {
     }
     function register_fields() {
         register_setting( 'general', 'custom_field', 'esc_attr' );
-        add_settings_field('fav_color', '<label for="custom_field">'.__('Your Field Name' , 'custom_field' ).'</label>' , array(&$this, 'fields_html') , 'general' );
+        add_settings_field('custom_filed', '<label for="custom_field">'.__('Your Field Name' , 'custom_field' ).'</label>' , array(&$this, 'fields_html') , 'general' );
     }
     function fields_html() {
         $value = get_option( 'custom_field', '' );
